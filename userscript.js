@@ -82,7 +82,7 @@
     Some style changes to fix the way certain templates
     render with this script.
     ***************************/
-    $("body").append("<style>@media (max-width: 500px) {div#siteTable {max-width: 92vw;}}</style>")
+    $("body").append("<style>@media (max-width: 850px) {div#siteTable {max-width: 100vw;}}</style>")
     /*****************************
     Functions for hiding and showing the sidebar
     ****************************/
