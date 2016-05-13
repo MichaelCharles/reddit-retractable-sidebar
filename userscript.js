@@ -72,20 +72,22 @@
     }
     return "";
   }
-
-  if (getCookie("isRetracted") == "true") {
-    hideSidebar();
-  } else {
-    showSidebar();
-  }
-  $("body").append($toggleButton);
-  $toggleButton.click(function() {
-    var currentIcon = $toggleButton.html().trim();
-    if (currentIcon === rightIcon) {
+  if (window.location.href.indexOf("/submit/") === -1) {
+    if (getCookie("isRetracted") == "true") {
       hideSidebar();
-    } else {
+    }
+    else {
       showSidebar();
     }
-  });
-
+    $("body").append($toggleButton);
+    $toggleButton.click(function() {
+      var currentIcon = $toggleButton.html().trim();
+      if (currentIcon === rightIcon) {
+        hideSidebar();
+      }
+      else {
+        showSidebar();
+      }
+    });
+  }
 })();
