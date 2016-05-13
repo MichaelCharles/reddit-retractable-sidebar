@@ -24,7 +24,7 @@
 // @id           RedditRetractableSidebar
 // @name         Reddit Retractable Sidebar
 // @namespace    http://michaelcharl.es
-// @version      0.3.0
+// @version      0.3.1
 // @description  Make Reddit's Sidebar Retractable
 // @icon         https://mca62511.github.io/reddit-retractable-sidebar/favicon.png
 // @icon64       https://mca62511.github.io/reddit-retractable-sidebar/favicon.png
@@ -78,6 +78,13 @@
         $score.html(votePercentage[1] + " out of " + voteTotal + " total, ");
         $score.prependTo($("#siteTable .tagline"));
     }
+    /**************************
+    Some style changes to fix the way certain templates
+    render with this script.
+    ***************************/
+    $("div#siteTable").css({
+        "max-width": "93vw"
+    });
     /*****************************
     Functions for hiding and showing the sidebar
     ****************************/
