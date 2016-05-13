@@ -1,0 +1,99 @@
+      body {
+          color: #212121;
+      }
+      
+      nav {
+          background-color: #CEE3F8;
+          padding: 1em;
+          border-bottom: 1px #5F99CF solid;
+          padding-bottom: 0.25em;
+      }
+      
+      nav h1 {
+          font-size: 24px;
+          padding-bottom: 0;
+          margin-bottom: 0;
+      }
+      
+      #page-name {
+          position: absolute;
+          background: white;
+          display: inline-block;
+          margin-left: 10px;
+          margin-top: -5px;
+          height: 27px;
+          padding: 5px;
+          border-top: 1px #5F99CF solid;
+          border-left: 1px #5F99CF solid;
+          border-right: 1px #5F99CF solid;
+          color: #FF8417;
+      }
+      
+      h3 {
+          margin-left: 1em;
+      }
+      
+      main {
+          background-color: #FAFAFA;
+          border: 1px #336699 solid;
+          border-radius: 5px;
+          padding: 0 1em;
+          margin: 1em;
+          max-width: 850px;
+      }
+      
+      div.side {
+          position: absolute;
+          top: 81px;
+          right: 0;
+          width: 335px;
+      }
+      
+      div.side-section-top {
+          background-color: #EFF7FF;
+          border: 1px #5f99cf solid;
+          border-radius: 3px;
+          margin: 0 1em;
+          padding: .25em;
+      }
+      
+      div.side-section {
+          border-radius: 3px;
+          margin: 0 1em;
+          margin-top: 1em;
+          padding: .25em;
+      }
+      
+      div.side-section button {
+          width: 100%;
+          color: #369;
+          font-weight: bold;
+          line-height: 29px;
+          background: linear-gradient(white, #EFF7FF);
+          border: 1px solid #aFb7bF;
+      }
+      
+      div.side-section button:hover {
+          color: white;
+          background: linear-gradient(#C1D7EC, rgb(113, 163, 210));
+          border: 1px solid #7f878f;
+      }
+      
+      .flexbox {
+          display: flex;
+      }
+      
+      .flexbox div {
+          margin: 1em;
+      }
+      
+      .flexbox img {
+          width: 100%;
+      }
+      
+      .flexbox .caption {
+          font-size: 80%;
+          text-align: center;
+          padding: 0;
+          margin: 0;
+      }

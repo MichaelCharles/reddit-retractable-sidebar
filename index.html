@@ -1,14 +1,14 @@
-
-
 <!DOCTYPE html>
-<html >
-  <head>
+
+<html>
+
+<head>
     <meta charset="UTF-8">
 
 
     <title>Reddit Retractable Sidebar</title>
-    
-   <meta charset="UTF-8">
+
+    <meta charset="UTF-8">
 
     <!-- Viewport for a responsive mobile first site. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,211 +38,78 @@
     <!-- Normalize.css for cross browser consistency -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.0.0/normalize.min.css">
 
+    <link rel="stylesheet" href="style.css">
 
-    
-        <style>
-      body {
-    color: #212121;
-}
 
-nav {
-    background-color: #CEE3F8;
-    padding: 1em;
-    border-bottom: 1px #5F99CF solid;
-    padding-bottom: 0.25em;
-}
 
-nav h1 {
-    font-size: 24px;
-    padding-bottom: 0;
-    margin-bottom: 0;
-}
 
-#page-name {
-    position: absolute;
-    background: white;
-    display: inline-block;
-    margin-left: 10px;
-    margin-top: -5px;
-    height: 27px;
-    padding: 5px;
-    border-top: 1px #5F99CF solid;
-    border-left: 1px #5F99CF solid;
-    border-right: 1px #5F99CF solid;
-    color: #FF8417;
-}
+</head>
 
-h3 {
-    margin-left: 1em;
-}
+<body translate="no">
 
-main {
-    background-color: #FAFAFA;
-    border: 1px #336699 solid;
-    border-radius: 5px;
-    padding: 0 1em;
-    margin: 1em;
-    max-width: 850px;
-}
+    <nav>
+        <h1>Reddit <span id="page-name">Retractable Sidebar</span></h1></nav>
+    <h3>A script to hide or show reddit's sidebar.</h3>
+    <main>
 
-div.side {
-    position: absolute;
-    top: 81px;
-    right: 0;
-    width: 335px;
-}
 
-div.side-section-top {
-    background-color: #EFF7FF;
-    border: 1px #5f99cf solid;
-    border-radius: 3px;
-    margin: 0 1em;
-    padding: .25em;
-}
+        <p>If you do a lot of split screen redditing, you'll quickly find that the sidebar can be a nuisance. Well, this script makes that sidebar retractable.</p>
 
-div.side-section {
-    border-radius: 3px;
-    margin: 0 1em;
-    margin-top: 1em;
-    padding: .25em;
-}
+        <p>It adds a FAB button to the right-hand side of the screen which allows you to hide or show the sidebar. It will add a cookie remembering the sidebar's last position so that you can browse the site without continually hiding it.</p>
 
-div.side-section button {
-    width: 100%;
-    color: #369;
-    font-weight: bold;
-    line-height: 29px;
-    background: linear-gradient(white, #EFF7FF);
-    border: 1px solid #aFb7bF;
-}
+        <p>This page is set up with a demo of the script. You can hide or show the sidebar by clicking on the FAB button to the right.</p>
 
-div.side-section button:hover {
-    color: white;
-    background: linear-gradient(#C1D7EC, rgb(113,163,210));
-    border: 1px solid #7f878f;
-}
-    </style>
+        <div class="flexbox">
+            <div class="left-image">
+                <a href="before.jpg" target="_blank">
+                    <img src="before.jpg" alt="Image of reddit with the sidebar showing.">
 
-    
-    
-    
-  </head>
+                    <p class="caption">Image of the sidebar showing while multitasking.</p>
+                </a>
+            </div>
+            <div class="right-image">
+                <a href="after.jpg" target="_blank">
+                    <img src="after.jpg" alt="Image of reddit with the sidebar hidden.">
 
-  <body translate="no" >
+                    <p class="caption">Image of the sidebar hiddeng while multitasking.</p>
+                </a>
+            </div>
+        </div>
 
-    <nav><h1>Reddit <span id="page-name">Retractable Sidebar</span></h1></nav>
-<h3>A script to hide or show reddit's sidebar.</h3>
-<main>
-    
-    
-    <p>If you do a lot of split screen redditing, you'll quickly find that the sidebar can be a nuisance. Well, this script makes that sidebar retractable.</p>
+        <h4>Getting started</h4>
 
-<p>It adds a FAB button to the right-hand side of the screen which allows you to hide or show the sidebar. It will add a cookie remembering the sidebar's last position so that you can browse the site without continually hiding it.</p>
+        <p>First, you must have an extension for your browser such as Tampermonkey (Chrome) or Greasemonkey (Firefox).</p>
 
-<p>This page is set up with a demo of the script. You can hide or show the sidebar by clicking on the FAB button to the right.</p>
-    
-    <h4>Getting started</h4>
-    
-    <p>First, you must have an extension for your browser such as Tampermonkey (Chrome) or Greasemonkey (Firefox).</p>
-    
-    <p>After one of those extensions are installed, you can easily add this script by clicking on the button to the right or by going to it's <a href="https://greasyfork.org/en/scripts/19638-reddit-retractable-sidebar">GreasyFork</a> page.</p>
-</main>
-<div class="side">
-    <div class="side-section-top">
-        This script can be downloaded from its <a href="https://greasyfork.org/en/scripts/19638-reddit-retractable-sidebar">GreasyFork page</a> or by clicking on the button bellow.<br>
-    </div>
-    <div class="side-section">
-        <a href="https://greasyfork.org/scripts/19638-reddit-retractable-sidebar/code/Reddit%20Retractable%20Sidebar.user.js"><button>Install this script</button></a>
-    </div>
-    <div class="side-section">
-        <h4>Related links</h3>
+        <p>After one of those extensions are installed, you can easily add this script by clicking on the button to the right or by going to it's <a href="https://greasyfork.org/en/scripts/19638-reddit-retractable-sidebar">GreasyFork</a> page.</p>
+    </main>
+    <div class="side">
+        <div class="side-section-top">
+            This script can be downloaded from its <a href="https://greasyfork.org/en/scripts/19638-reddit-retractable-sidebar">GreasyFork page</a> or by clicking on the button bellow.
+            <br>
+        </div>
+        <div class="side-section">
+            <a href="https://greasyfork.org/scripts/19638-reddit-retractable-sidebar/code/Reddit%20Retractable%20Sidebar.user.js">
+                <button>Install this script</button>
+            </a>
+        </div>
+        <div class="side-section">
+            <h4>Related links</h3>
         <ul>
             <li><a href="https://github.com/mca62511/reddit-retractable-sidebar">This project's GitHub page</a></li>
-            <li><a href="http://michaelcharl.es">Author's Homepage</a></li>
-            <li><a href="http://github.org/mca62511">Author's GitHub page</a></li>
-            <li><a href="http://freecodecamp.com">FreeCodeCamp</a></li>
-            <li><a href="http://reddit.com/r/freecodecamp">FreeCodeCamp subreddit</a></li>
+            <li><a href="http://michaelcharl.es" target="_blank">Author's Homepage</a></li>
+            <li><a href="http://github.org/mca62511" target="_blank">Author's GitHub page</a></li>
+            <li><a href="http://freecodecamp.com" target="_blank">FreeCodeCamp</a></li>
+            <li><a href="http://reddit.com/r/freecodecamp" target="_blank">FreeCodeCamp subreddit</a></li>
         </ul>
     </div>
 </div>
     
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
 
-        <script>
-      (function() {
-  'use strict';
-  var pseudoCookie = "false";
-    
-  var leftIcon = '<i class="material-icons">chevron_left</i>';
-  var rightIcon = '<i class="material-icons">chevron_right</i>';
-  $("head").append("<link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet' type='text/css'>");
-  var $content = $("main");
-  var $toggleButton = $("<div></div>");
-  $toggleButton.css({
-    background: "#CEE3F8",
-    color: "#212121",
-    display: "flex",
-    'justify-content': "center",
-    'align-items': "center",
-    height: "42px",
-    width: "42px",
-    "font-size": "32px",
-    "border-radius": "100px",
-    "box-shadow": "0px 3px 5px 0px rgba(33,33,33,0.3)",
-    position: "fixed",
-    top: "50%",
-    right: "-7px",
-    cursor: "pointer"
-  });
-  var $sidebar = $("div.side");
-
-  function hideSidebar() {
-    $sidebar.hide();
-    $content.css({
-      "margin-right": "15px"
-    });
-    $toggleButton.html(leftIcon);
-    setCookie("isRetracted", "true", 30);
-  }
-
-  function showSidebar() {
-    $sidebar.show();
-    $content.css({
-      "margin-right": "335px"
-    });
-    $toggleButton.html(rightIcon);
-    setCookie("isRetracted", "false", 30);
-  }
-
-  function setCookie(cname, cvalue, exdays) {
-    pseudoCookie = cvalue;
-  }
-
-  function getCookie(cname) {
-    return pseudoCookie;
-  }
-
-  if (getCookie("isRetracted") == "true") {
-    hideSidebar();
-  } else {
-    showSidebar();
-  }
-  $("body").append($toggleButton);
-  $toggleButton.click(function() {
-    var currentIcon = $toggleButton.html().trim();
-    if (currentIcon === rightIcon) {
-      hideSidebar();
-    } else {
-      showSidebar();
-    }
-  });
-
-})();
-    </script>
+    <script src="script.js"></script>
 
     
     
     
   </body>
 </html>
- 
