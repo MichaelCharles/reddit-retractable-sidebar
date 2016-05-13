@@ -1,13 +1,29 @@
 // ==UserScript==
 // @name         Reddit Retractable Sidebar
-// @namespace    http://mca62511.github.io/reddit-retractable-sidebar/
-// @version      0.2.2
+// @namespace    http://michaelcharl.es
+// @version      0.2.5
 // @description  Make Reddit's Sidebar Retractable
 // @author       Michael Aubrey
 // @match        https://www.reddit.com/*
 // @grant        none
-// @require http://code.jquery.com/jquery-latest.js
+
 // ==/UserScript==
+
+
+// The addJQuery function was taken from: https://gist.github.com/eristoddle/4440713
+// This makes the script play nice with other things like Reddit Enhancement Suite
+// Just doing @require was throwing an error
+function addJQuery(callback) {
+    var script = document.createElement("script");
+    script.setAttribute("src", "//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js");
+    script.addEventListener('load', function() {
+        var script = document.createElement("script");
+        script.textContent = "window.jQ=jQuery.noConflict(true);(" + callback.toString() + ")();";
+        document.body.appendChild(script);
+    }, false);
+    document.body.appendChild(script);
+}
+
 (function() {
   'use strict';
   var leftIcon = '<i class="material-icons">chevron_left</i>';
@@ -51,6 +67,9 @@
     setCookie("isRetracted", "false", 30);
   }
 
+
+// These setCookie and getCookie functions were copied
+// from w3schools.
   function setCookie(cname, cvalue, exdays) {
     var d = new Date();
     d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
