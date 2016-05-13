@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Reddit Retractable Sidebar
-// @namespace    http://michaelcharl.es
-// @version      0.2.1
+// @namespace    http://mca62511.github.io/reddit-retractable-sidebar/
+// @version      0.2.2
 // @description  Make Reddit's Sidebar Retractable
 // @author       Michael Aubrey
 // @match        https://www.reddit.com/*
