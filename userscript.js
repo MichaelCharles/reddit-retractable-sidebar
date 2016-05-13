@@ -45,7 +45,8 @@ function addJQuery(callback) {
     position: "fixed",
     top: "50%",
     right: "-7px",
-    cursor: "pointer"
+    cursor: "pointer",
+    "z-index": "9983"
   });
   var $sidebar = $("div.side");
 
