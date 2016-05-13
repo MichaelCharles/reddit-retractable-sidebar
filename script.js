@@ -24,7 +24,7 @@
 // @id           RedditRetractableSidebar
 // @name         Reddit Retractable Sidebar
 // @namespace    http://michaelcharl.es
-// @version      0.2.6
+// @version      0.3.0
 // @description  Make Reddit's Sidebar Retractable
 // @icon         https://mca62511.github.io/reddit-retractable-sidebar/favicon.png
 // @icon64       https://mca62511.github.io/reddit-retractable-sidebar/favicon.png
