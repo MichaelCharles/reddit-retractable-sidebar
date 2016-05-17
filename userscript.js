@@ -24,7 +24,7 @@
 // @id           RedditRetractableSidebar
 // @name         Reddit Retractable Sidebar
 // @namespace    http://michaelcharl.es
-// @version      0.4.2
+// @version      0.4.3
 // @description  Make Reddit's Sidebar Retractable
 // @icon         https://mca62511.github.io/reddit-retractable-sidebar/favicon.png
 // @icon64       https://mca62511.github.io/reddit-retractable-sidebar/favicon.png
@@ -133,7 +133,9 @@
     hide or show the sidebar according to the last
     state that it was in.
     *************************************************/
-    if (window.location.href.indexOf("/submit") === -1 && window.location.href.indexOf("/submitted") > -1 ) {
+    if (window.location.href.indexOf("/submit") > -1 && window.location.href.indexOf("/submitted") === -1 ) {
+            // do nothing
+    } else {
         if (getCookie("isRetracted") == "true") {
             hideSidebar();
         }
