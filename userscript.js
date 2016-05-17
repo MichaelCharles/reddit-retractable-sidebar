@@ -24,7 +24,7 @@
 // @id           RedditRetractableSidebar
 // @name         Reddit Retractable Sidebar
 // @namespace    http://michaelcharl.es
-// @version      0.3.12
+// @version      0.4
 // @description  Make Reddit's Sidebar Retractable
 // @icon         https://mca62511.github.io/reddit-retractable-sidebar/favicon.png
 // @icon64       https://mca62511.github.io/reddit-retractable-sidebar/favicon.png
@@ -83,9 +83,9 @@
     render with this script.
     ***************************/
     $("body").append("<style>@media (max-width: 850px) {div#siteTable {max-width: 100vw;}}</style>")
-    /*****************************
-    Functions for hiding and showing the sidebar
-    ****************************/
+        /*****************************
+        Functions for hiding and showing the sidebar
+        ****************************/
     function hideSidebar() {
         $sidebar.hide();
         $content.css({
@@ -151,4 +151,19 @@
             }
         });
     }
+    /*******************************
+    Causes the sidebar to retract when you press "q"
+    ********************************/
+    $("body").on("keypress", function(e) {
+        var tagName = e.target.tagName.toLowerCase();
+        console.log(e.keyCode);
+        if (tagName === "input" || tagName === "textarea") {
+            return /*do nothing */;
+        }
+        else {
+            if (e.keyCode === 113) {
+                $toggleButton.click();
+            }
+        }
+    });
 })();
